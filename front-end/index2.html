@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="controllerApi.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/estile.css" media="screen" />
+    
+        
+        <title>Paginas web Arduino</title>
+        </head>
+        
+        <body>
+        
+        <h1>Olá estámos conectado no arduino Pagina 2</h1><hr>
+        <h1>Atualizar Valor</h1>
+       <p>Frente: <span id="frente">false</span></p>
+       <p>Traz: <span id="traz">false</span></p>
+       <p>Esquerdo: <span id="esquerda">false</span></p>
+       <p>Direito: <span id="direita">false</span></p>
+        
+        <div class ="container">
+            <div class="autonomo"> <button class ="frente"  ><a href="/front-end/index.html">Autônomo</a></button></div>
+                  <div class ="layButtons">
+                    <div class="btnCentro"><button class ="frente" id="frenteDown">Frente</button></div>
+                 
+                  <div class="btnCentro">
+                      <div><button class ="esquerda"  id="esquerdaDown">Esquerda</button></div><br>
+                      <div><button class ="parar"  >Parar</button></div><br>
+                      <div><button class ="direita" id="direitaDown" >Direita</button></div><br>
+              </div>
+              <div class="btnCentro"><button  id="trazDown"  class ="traz" onclick="atualizarTraz()">Traz</button></div>
+                  
+        
+        </div>
+        </div>
+</body>
+</html>
+
+
+
+

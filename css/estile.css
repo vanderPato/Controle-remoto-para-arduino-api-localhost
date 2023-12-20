@@ -1,0 +1,59 @@
+.traz, .frente, .esquerda, .parar, .direita {
+    background-color: #4f4103;
+    border-radius: 20%;
+    margin: 10px;
+    height: 80px;
+    width: 120px;
+}
+
+.traz {
+    margin-left: 50px;
+    background-color: #4f4103;
+    border-radius: 20%;
+    margin: 10px;
+    height: 80px;
+    width: 120px;
+}
+
+.parar {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.container {
+    background-color: #FFDA9F;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    height: 60vh;
+    width: 100%;
+    height: 100%;
+}
+
+.layButtons {
+    margin: 0 auto;
+    background-color: #FFDA4F;
+    border-radius: 15px; /* Ajustei para um valor mais proporcional */
+    border: none;
+    padding: 5%;
+    width: 70%; /* Ajustei para um valor maior */
+}
+
+.btnCentro {
+    display: flex;
+    justify-content: center;
+}
+
+.autonomo {
+    background-color: #FFDA4F;
+    padding: 10px; /* Adicionei um preenchimento para melhorar a aparência */
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 10px; /* Corrigi o tamanho da fonte */
+}
+
+/* Adicione outros estilos conforme necessário */
