@@ -2,11 +2,17 @@
 #include <HTTPClient.h>
 #include <ArduinoJson.h>
 #include "RoboCore_Vespa.h"
+#include <Ultrasonic.h>
 
 
 const char *ssid = "Delosma16_plus";
 const char *password = "breno1603";
 VespaMotors motors;
+Ultrasonic ultrasonic(26, 25);
+int distance;
+const char *url = "http://192.168.1.26:3000/api/data";
+
+
 
 void setup() {
 Serial.begin(9600);
@@ -21,6 +27,8 @@ Serial.println("Conectado ao WiFi");
 }
 
 void loop() {
+  //distance = ultrasonic.read();
+ // patchApi();
   String data = getApi();
 
  
@@ -30,30 +38,36 @@ void loop() {
      String traz     = dado["traz"];
      String esquerda = dado["esquerda"];
      String direita  = dado["direita"];
+     int velocidade = dado["velocidade"];
+
+    Serial.println("velocidade " + velocidade );
+    Serial.println(" ");
+    Serial.println(" ");
+
 
    if(frente == "true"){
     Serial.println("Frente");
-          motors.setSpeedLeft(-70);
-          motors.setSpeedRight(-70);  
+          motors.setSpeedLeft(-velocidade);
+          motors.setSpeedRight(-velocidade);  
 
     }else if(traz == "true"){
     Serial.println("Ré");
 
-      motors.setSpeedLeft(70);
-      motors.setSpeedRight(70); 
+      motors.setSpeedLeft(velocidade);
+      motors.setSpeedRight(velocidade); 
       
     }else if(esquerda == "true"){
     Serial.println("esquerda");
       //motors.forward(60);
-      motors.setSpeedLeft(80);
-      motors.setSpeedRight(-80);
+      motors.setSpeedLeft(velocidade);
+      motors.setSpeedRight(-velocidade);
 
 
 
     }else if(direita == "true"){
     Serial.println("direita");
-      motors.setSpeedRight(80);
-      motors.setSpeedLeft(-80);
+      motors.setSpeedRight(velocidade);
+      motors.setSpeedLeft(-velocidade);
 
 
 
@@ -65,14 +79,13 @@ void loop() {
         motors.stop();
       }
 
-        delay(200);
+        delay(300);
 
    }
 
 
 
 String getApi(){
-  String url = "http://192.168.1.26:3000/api/data";
   // Inicializar uma instância do cliente HTTP
   HTTPClient http;
   http.begin(url);
@@ -94,4 +107,33 @@ String getApi(){
   // Encerrar a conexão com a API
   http.end();
   
+}
+
+
+
+void patchApi(){
+  distance = ultrasonic.read();
+  Serial.print(distance);
+  String data = "frente=true&traz=false&esquerda=false&direita=false&sensor=" + distance;
+  
+  
+  HTTPClient http;
+ // http.begin(url);
+  http.begin(url);
+  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
+  int httpCode = http.POST(data);
+
+
+  if (httpCode > 0) {
+    // Se a requisição for bem-sucedida, imprima a resposta
+    String payload = http.getString();
+    Serial.println("Resposta do servidor: " + payload);
+  } else {
+    Serial.println("Falha na requisição POST");
+  }
+  http.end();
+
+  // Aguardar um intervalo antes de fazer a próxima requisição
+  
+
 }

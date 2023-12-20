@@ -9,18 +9,26 @@ let data = {
     frente: false,
     traz:false,
     esquerda:false,
-    direita:false
+    direita:false,
+    sensor:0,
+    velocidade:"0"
 };
 
 app.use(cors());
 app.get('/api/data', (req, res) => {
     res.json(data);
+   
+
+    
 });
 
 app.patch('/api/data', (req, res) => {
     try {
     // Supondo que os dados a serem atualizados são fornecidos no corpo da solicitação
     const newData = req.body;
+
+
+    console.log('Valores para teste ' ,newData);
 
     // Atualize os dados conforme necessário
     if (newData.frente !== undefined) {
@@ -39,6 +47,10 @@ app.patch('/api/data', (req, res) => {
 
     if (newData.direita !== undefined) {
         data.direita = newData.direita;
+        
+    }
+    if (newData.velocidade !== undefined) {
+        data.velocidade = newData.velocidade;
         
     }
 
