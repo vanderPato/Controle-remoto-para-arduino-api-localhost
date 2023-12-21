@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SegundaTela">
+
+
+
+
+
+    <Button
+        android:id="@+id/controle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="controle 1"
+
+        android:layout_marginTop="20dp" />
+
+
+
+    <Button
+        android:id="@+id/btnFrente"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="Frente"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Botão Trás -->
+    <Button
+        android:id="@+id/btnTraz"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="Trás"
+
+        android:layout_below="@id/btnFrente"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Botão Esquerda -->
+    <Button
+        android:layout_marginLeft="20dp"
+        android:id="@+id/btnEsquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="Esquerda"
+        android:layout_toLeftOf="@id/btnFrente"
+        android:layout_below="@id/btnFrente"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp" />
+
+    <!-- Botão Direita -->
+    <Button
+        android:id="@+id/btnDireita"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="Direita"
+        android:layout_toRightOf="@id/btnFrente"
+        android:layout_below="@id/btnFrente"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp" />
+
+
+    <LinearLayout
+        android:id="@+id/containee"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/texV"
+            android:text="0 KM/H"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

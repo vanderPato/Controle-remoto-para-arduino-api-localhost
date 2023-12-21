@@ -40,8 +40,8 @@ void loop() {
      String direita  = dado["direita"];
      int velocidade = dado["velocidade"];
 
-    Serial.println("velocidade " + velocidade );
-    Serial.println(" ");
+    Serial.println("velocidade ");
+    Serial.println(velocidade);
     Serial.println(" ");
 
 
@@ -79,7 +79,7 @@ void loop() {
         motors.stop();
       }
 
-        delay(300);
+        //delay(150);
 
    }
 

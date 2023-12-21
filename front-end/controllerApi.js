@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded",  function( ) {
     let direita = false;
     let esquerda = false;
 
-    let percentPosition =0
+    let percentPosition =70
 
 
     
@@ -184,30 +184,34 @@ document.addEventListener("DOMContentLoaded",  function( ) {
 
 
             // Adiciona um ouvinte de evento para rastrear a posição do mouse
-        document.addEventListener('mousedown', function() {
+        statusBar.addEventListener('mousedown', function() {
             velocidadeCar = true; 
            
             console.log(velocidadeCar);
         });
 
-        document.addEventListener('mouseup', function() {
+        statusBar.addEventListener('mouseup', function() {
             velocidadeCar = false; 
             console.log(velocidadeCar);
            
 });
 
     console.log('aqui');
-document.addEventListener("mousemove", function(event) {
+    document.addEventListener("mousemove", function(event) {
     if(velocidadeCar){ 
     
-    percentPosition = (event.clientX / window.innerWidth) * 100;
+    percentPosition = (event.clientX / window.innerWidth) * 100 +2;
     console.log('valorees', percentPosition.toFixed(0));
 
 
     statusBar.style.width = percentPosition + "%";
-    statusBar.innerText = percentPosition.toFixed(0) + "%";
+    statusBar.innerText = percentPosition.toFixed(0) + " KM/H";
 
     //console.log('Valor',  percentPosition.toFixed(0));
+    // if(percentPosition.toFixed(0) >100){
+    //     percentPosition = 100;
+    //     console.log('maior', percentPosition);
+    // }
 
     atualizarValorCar(frente, traz , esquerda, direita, percentPosition.toFixed(0).toString());
 }
