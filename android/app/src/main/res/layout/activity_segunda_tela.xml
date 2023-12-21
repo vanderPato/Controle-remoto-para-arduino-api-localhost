@@ -28,7 +28,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
 
-    <!-- Botão Trás -->
     <Button
         android:id="@+id/btnTraz"
         android:layout_width="wrap_content"
@@ -39,7 +38,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
 
-    <!-- Botão Esquerda -->
     <Button
         android:layout_marginLeft="20dp"
         android:id="@+id/btnEsquerda"
@@ -51,7 +49,6 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp" />
 
-    <!-- Botão Direita -->
     <Button
         android:id="@+id/btnDireita"
         android:layout_width="wrap_content"

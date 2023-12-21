@@ -216,8 +216,7 @@ public class MainActivity extends AppCompatActivity {
             jsonBody.put("esquerda", esquerdaCar);
             jsonBody.put("direita", direitaCar);
             jsonBody.put("velocidade", String.valueOf(velocidadeCar));
-            // Adicione outros campos conforme necessário
-        } catch (JSONException e) {
+             } catch (JSONException e) {
             e.printStackTrace();
         }
 

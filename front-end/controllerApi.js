@@ -1,7 +1,6 @@
 
 
 
-// Em quanto o botão estiver precionado 
     document.addEventListener("DOMContentLoaded", function() {
         const frenteDown = document.getElementById("frenteDown");
         const trazDown = document.getElementById("trazDown");
@@ -71,7 +70,6 @@ async function atualizarDown(valorFrente, valorTraz, valorEsquerdo, valorDireito
     const valorEsquerdaSpan = document.getElementById('esquerda');
     const valoTrazSpan = document.getElementById('traz');
     const valorFrenteSpan = document.getElementById('frente');
-    // valorFrente = valorFrenteSpan.innerText === 'true';
     
     
     const newData = {
@@ -100,7 +98,6 @@ async function atualizarDown(valorFrente, valorTraz, valorEsquerdo, valorDireito
 
 
 
-//Usando click para controlar o arduino
 
 document.addEventListener("DOMContentLoaded",  function( ) {
    const valorDireitaSpan = document.getElementById('direitaCar');
@@ -183,7 +180,6 @@ document.addEventListener("DOMContentLoaded",  function( ) {
 
 
 
-            // Adiciona um ouvinte de evento para rastrear a posição do mouse
         statusBar.addEventListener('mousedown', function() {
             velocidadeCar = true; 
            
@@ -207,11 +203,6 @@ document.addEventListener("DOMContentLoaded",  function( ) {
     statusBar.style.width = percentPosition + "%";
     statusBar.innerText = percentPosition.toFixed(0) + " KM/H";
 
-    //console.log('Valor',  percentPosition.toFixed(0));
-    // if(percentPosition.toFixed(0) >100){
-    //     percentPosition = 100;
-    //     console.log('maior', percentPosition);
-    // }
 
     atualizarValorCar(frente, traz , esquerda, direita, percentPosition.toFixed(0).toString());
 }

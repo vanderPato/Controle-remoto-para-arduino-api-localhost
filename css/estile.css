@@ -35,10 +35,10 @@
 .layButtons {
     margin: 0 auto;
     background-color: #FFDA4F;
-    border-radius: 15px; /* Ajustei para um valor mais proporcional */
+    border-radius: 15px; 
     border: none;
     padding: 5%;
-    width: 70%; /* Ajustei para um valor maior */
+    width: 70%;  
 }
 
 .btnCentro {
@@ -48,13 +48,13 @@
 
 .autonomo {
     background-color: #FFDA4F;
-    padding: 10px; /* Adicionei um preenchimento para melhorar a aparência */
+    padding: 10px;  
 }
 
 a {
     text-decoration: none;
     color: aliceblue;
-    font-size: 10px; /* Corrigi o tamanho da fonte */
+    font-size: 10px;  
 }
 
 
@@ -72,4 +72,4 @@ a {
     user-select: none;
 }
 
-/* Adicione outros estilos conforme necessário */
+ 

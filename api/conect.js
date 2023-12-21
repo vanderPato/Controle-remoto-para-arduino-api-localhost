@@ -24,13 +24,13 @@ app.get('/api/data', (req, res) => {
 
 app.patch('/api/data', (req, res) => {
     try {
-    // Supondo que os dados a serem atualizados são fornecidos no corpo da solicitação
+    
     const newData = req.body;
 
 
     console.log('Valores para teste ' ,newData);
 
-    // Atualize os dados conforme necessário
+   
     if (newData.frente !== undefined) {
         data.frente = newData.frente;
 
@@ -55,7 +55,6 @@ app.patch('/api/data', (req, res) => {
     }
 
 
-    // Envie uma resposta com os dados atualizados
     res.json(data);
 } catch(error){
     console.error('Erro durante a rota PATCH:', error);
