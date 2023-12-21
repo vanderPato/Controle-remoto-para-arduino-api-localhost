@@ -17,8 +17,9 @@
 - Com base no valor recebido (verdadeiro ou falso), executa ações específicas.
 
 ## 4. Aplicativo Android:
-- Desenvolvido para fornecer as mesmas funcionalidades do front-end.
-- Permite ao usuário controlar o Arduino remotamente usando a API local.
+- Desenvolvido para fornecer uma experiência mobile do controle remoto.
+- Oferece os mesmos botões de controle que o front-end.
+- Envia requisições à API local para interagir com o Arduino.
 
 # Fluxo de Ações
 1. Usuário clica em um botão no front-end.
@@ -38,6 +39,11 @@
 2. Configure o Arduino com o código do diretório arduino/.
 3. Inicie a API local no diretório api/.
 4. Abra o front-end em um navegador.
+
+# Desenvolvimento Android
+O aplicativo Android foi desenvolvido para fornecer uma experiência intuitiva de controle remoto, permitindo que o usuário interaja com o Arduino por meio do smartphone. Utilizou-se o Android Studio para o desenvolvimento, e o código-fonte está disponível no diretório android/app.
+
+
 
 # Contribuições
 #### Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas ou enviar pull requests.
