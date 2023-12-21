@@ -16,6 +16,10 @@
 - Faz repetidas requisições GET à API local.
 - Com base no valor recebido (verdadeiro ou falso), executa ações específicas.
 
+## 4. Aplicativo Android:
+- Desenvolvido para fornecer as mesmas funcionalidades do front-end.
+- Permite ao usuário controlar o Arduino remotamente usando a API local.
+
 # Fluxo de Ações
 1. Usuário clica em um botão no front-end.
 2. Front-end envia uma requisição à API local, alterando o valor booleano.
