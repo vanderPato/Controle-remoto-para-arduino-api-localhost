@@ -27,6 +27,7 @@
 - 📂 front-end/: Páginas HTML e JavaScript para controlar o Arduino.
 - 📂 api/: Código-fonte da API local.
 - 📂 css/: Código-fonte da folha de estilo.
+- 📂 android/app: Código-fonte Android.
 
 # Configuração
 1. Clone o repositório: git clone https://github.com/vanderPato/Arduino-web-api-json.git.
